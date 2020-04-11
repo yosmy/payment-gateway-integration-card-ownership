@@ -1,12 +1,14 @@
 {
-    "name": "yosmy/payment-card-ownership",
+    "name": "yosmy/payment-gateway-integration-card-ownership",
     "description": "",
     "require": {
         "php": ">=7.2",
-        "ext-mongodb": "*",
         "ext-json": "*",
         "yosmy/payment-gateway-integration": "@dev",
+        "yosmy/payment-card-lookup": "@dev",
         "yosmy/config": "@dev",
+        "yosmy/currency": "@dev",
+        "yosmy/country": "@dev",
         "yosmy/error": "@dev",
         "yosmy/mongo": "@dev"
     },
@@ -16,7 +18,9 @@
     "autoload": {
         "psr-4": {
             "Yosmy\\Payment\\": [
-                "src"
+                "src/ownership",
+                "src/ownership-process",
+                "src/ownership-status"
             ]
         }
     },
